@@ -4,9 +4,9 @@ import java.util.Random;
 public class Tamagotchi {
     private int hunger;
     private int boredom;
-    private ArrayList<String> words = new ArrayList<String>() ;
+    private ArrayList<String> words = new ArrayList<>() ;
     private boolean isAlive = true;
-    private Random generator = new Random();
+    private final Random generator = new Random();
     public String name;
 
     public void feed() {
@@ -30,7 +30,7 @@ public class Tamagotchi {
     }
 
     public void printStats() {
-        System.out.println("Hunger: " + hunger + " Boredom: " + boredom + " Words: " + words + " Name: " + name + " isAlive: " + isAlive);
+        System.out.println("Hunger: " + hunger + " Boredom: " + boredom + " Words: " + words + " Name: " + name + " isAlive: " + getAlive());
     }
 
     public boolean getAlive() {
